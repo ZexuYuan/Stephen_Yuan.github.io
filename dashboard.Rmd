@@ -55,23 +55,3 @@ df %>%
     color = ~prcp, text = ~text_label, alpha = 0.5)
 ```
 
-Column {data-width=350}
------------------------------------------------------------------------
-
-### Chart B
-
-```{r}
-df %>% 
-  mutate(id = as.factor(id)) %>% 
-  plot_ly(y = ~tmin, color = ~id, type = "box", colors = "viridis")
-```
-
-### Chart C
-
-```{r}
-df %>% 
-  filter(snow>0) %>%
-  group_by(id) %>%
-  count(snow) %>%
-  plot_ly(x = ~id, y = ~n, color = ~id, type = "bar", colors = "viridis")
-```
