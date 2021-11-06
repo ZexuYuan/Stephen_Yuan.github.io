@@ -55,3 +55,14 @@ df %>%
     color = ~prcp, text = ~text_label, alpha = 0.5)
 ```
 
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+df %>% 
+  mutate(id = as.factor(id)) %>% 
+  plot_ly(y = ~tmin, color = ~id, type = "box", colors = "viridis")
+```
+
