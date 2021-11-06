@@ -1,12 +1,79 @@
 ---
-title: "About me"
+title: "Professional Experience"
 output: 
   html_document:
     toc: true
     toc_float: true
 ---
+\
+\
 
-# This is the page has information about me
+## EDUCATION
 
-I learn p8105.
+**Columbia University, Mailman School of Public Health**
 
+*Master of Public Health, Biostatistics*
+
+*Certificate: Public Health Research Methods*  
+
+ \
+ 
+**Xi'an Jiaotong-Liverpool University, Department of Mathematics**
+
+*Bachelor of Science, Financial Mathematics*
+
+\
+
+## INTERNSHIP EXPERIENCE
+
+**Hellobike Tech Inc.**
+
+*Business Analyst Intern*
+
+June 2021 - August 2021
+
+*   Participated in researching potential train tickets buyers using machine learning algorithms 
+
+*   Provided data strategies using Presto for constructing user profile and monitoring train-ticket sale
+
+\
+
+**Bilbili Group**
+
+*Big Data Developer Intern*
+
+March 2021 - April 2021
+
+*   Maintained and improved data warehouse
+
+*   Created business reports basing various features of 50 million daily active users
+
+\
+
+**Yidu Tech Inc**
+
+*Data Mining Intern*
+
+August 2020 - December 2020
+
+*   Participated in pre-marketing medicine projects and contributed to decision making by performing data analysis
+
+*   Developed SQL queries, producing appropriate statistics from large-scale data basing on various demands
+
+\
+
+## RESEARCH
+
+**Columbia University Irving Medical Center**
+
+October 2021 - Present
+
+*   Evaluated the impact of telemedicine on chronic disease outcomes including hypertension, depression, and COVID-19
+
+\
+
+## SKILLS
+
+*   Programming Languages: R, Python, SQL, SAS, Microsoft Excel
+
+*   Language: English (Fluent), Mandarin (Native)

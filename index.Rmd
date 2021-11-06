@@ -1,36 +1,24 @@
 ---
-title: "My awesome website"
+title: "Stephen Yuan's Website"
 output: 
   html_document:
     toc: true
     toc_float: true
 ---
+\
+\
 
-# This is Stephen's awesome website
+## Introduction
 
-What if I add some text here..??
+\
 
-![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
+Hi, I'm Stephen Yuan. I prefer the pronouns he/him/his.
 
-## Here's a subsection
+I am currently a second year MPH student at Columbia University Mailman School of Public Health. My professional interest is in the healthcare area, and my academic background combines Finance and Statistics.
 
-And here's some addition text .. 
+\
 
-```{r}
-rnorm(10)
-```
+## About Me
 
-## Links
+Click [Here](about.html) or more information about my academic and professional experiences.
 
-Lets link to useful tools for data science:
-
-* [Google](https://www.google.com/)
-* [P8105](https://www.p8105.com)
-
-## Local image
-
-Here is a local image..
-
-## Link to page within the website
-
-[About me](about.html)
