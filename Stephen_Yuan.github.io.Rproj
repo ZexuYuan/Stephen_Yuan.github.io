@@ -11,3 +11,6 @@ Encoding: UTF-8
 
 RnwWeave: Sweave
 LaTeX: pdfLaTeX
+
+BuildType: Website
+WebsitePath: ~/Desktop/P8105_DS/Class/Lecture06/Stephen_Yuan.github.io
