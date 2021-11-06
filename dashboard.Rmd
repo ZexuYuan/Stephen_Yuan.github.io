@@ -66,3 +66,12 @@ df %>%
   plot_ly(y = ~tmin, color = ~id, type = "box", colors = "viridis")
 ```
 
+### Chart C
+
+```{r}
+df %>% 
+  filter(snow>0) %>%
+  group_by(id) %>%
+  count(snow) %>%
+  plot_ly(x = ~id, y = ~n, color = ~id, type = "bar", colors = "viridis")
+```
