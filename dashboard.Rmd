@@ -1,0 +1,77 @@
+---
+title: "Dashboard"
+author: "Stephen Yuan"
+output:
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    source: embed
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(htmlwidgets)
+```
+
+```{r}
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+```
+
+```{r}
+df =
+  ny_noaa %>%
+  separate(date, c("year", "month", "day"), sep = "-") %>%
+  mutate(
+    year = as.numeric(year),
+    month = as.numeric(month),
+    day = as.numeric(day),
+    prcp = as.numeric(prcp)*0.1,
+    tmax = as.numeric(tmax)*0.1,
+    tmin = as.numeric(tmin)*0.1) %>%
+  drop_na(tmin, tmax)  %>%
+  filter(year==2010,
+         id %in% c("USC00301752", "USC00300889", "USC00301787",
+                   "USC00300961", "USC00302366", "USC00304791",
+                   "USC00300023", "USC00301401", "USC00301095",
+                   "USC00300732")
+         ) %>%
+  mutate(date = paste(month, day, sep = "/"))
+```
+
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+df %>%
+  filter(month %in% c(1, 2, 3, 4, 5, 6)) %>% 
+  mutate(text_label = str_c("Date:", date,  "\n Site ID:", id)) %>% 
+  plot_ly(
+    x = ~tmin, y = ~tmax, type = "scatter", mode = "markers",
+    color = ~prcp, text = ~text_label, alpha = 0.5)
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+df %>% 
+  mutate(id = as.factor(id)) %>% 
+  plot_ly(y = ~tmin, color = ~id, type = "box", colors = "viridis")
+```
+
+### Chart C
+
+```{r}
+df %>% 
+  filter(snow>0) %>%
+  group_by(id) %>%
+  count(snow) %>%
+  plot_ly(x = ~id, y = ~n, color = ~id, type = "bar", colors = "viridis")
+```
